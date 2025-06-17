@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>South Siede Voices Oficial Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background: url('https://www.transparenttextures.com/patterns/brick-wall.png'), hotpink;
+      color: lime;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      font-size: 3em;
+      text-shadow: 2px 2px yellow;
+      animation: blink 1s infinite alternate;
+    }
+
+    @keyframes blink {
+      from {opacity: 1;}
+      to {opacity: 0.3;}
+    }
+
+    marquee {
+      font-size: 1.5em;
+      color: cyan;
+      background: black;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .gif-party {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .gif-party img {
+      width: 100px;
+      height: auto;
+    }
+
+    audio {
+      margin-top: 20px;
+    }
+
+    .button {
+      margin: 20px;
+      padding: 15px;
+      background: lime;
+      border: 5px dotted red;
+      font-size: 1.2em;
+      text-decoration: none;
+      color: black;
+      display: inline-block;
+      transition: transform 0.3s;
+    }
+
+    .button:hover {
+      transform: rotate(5deg) scale(1.1);
+    }
+
+    footer {
+      font-size: 0.9em;
+      background: yellow;
+      padding: 10px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      .gif-party img {
+        width: 70px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <marquee behavior="alternate" scrollamount="10">🚨 America Most Dangerous Rap Group 🚨</marquee>
+
+  <div class="container">
+    <h1>South Siede Voices</h1>
+    
+    <div class="gif-party">
+      <img src="https://media.giphy.com/media/PQvrUM9Z8FDdN2ne9X/giphy.gif" alt="Arab">
+      <img src="https://media.giphy.com/media/bBWlUwbZcgnCg/giphy.gif" alt="Allah">
+      <img src="https://media.giphy.com/media/T17WcI4cGxcE8/giphy.gif" alt="Prayer">
+    </div>
+
+    <audio controls autoplay loop>
+      <source src="Concrete_Hadith.m4a" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <div>
+      <a href="#" class="button">South Siede Scripture (Coming Soon)</a>
+      <a href="https://www.youtube.com/watch?v=R_9RkFSgHkw" class="button">Allah Praise Song For Thug</a>
+    </div>
+  </div>
+
+  <br><br>
+  
+  <div>
+    <img src="ssspic.png" width="35%">
+    <p><font size="5">Intraducing Badr Lakt-Din (Left), DJ Elsamhudi (Middle), and Juju Al-Khayat (Right)</font></p>
+  </div>
+  <br>
+  
+  <p>Prayer Count: <span id="count">0</span></p>
+  <img src="https://media.giphy.com/media/T17WcI4cGxcE8/giphy.gif" alt="Prayer" width="20%"><br>
+  <button id="clickBtn">Pray 4 Allah</button>
+  
+  <br><br>
+  
+<script>
+  let count = localStorage.getItem("clickCount") || 0;
+  const countEl = document.getElementById("count");
+  const btn = document.getElementById("clickBtn");
+
+  countEl.textContent = count;
+
+  btn.addEventListener("click", () => {
+    count++;
+    localStorage.setItem("clickCount", count);
+    countEl.textContent = count;
+  });
+</script>
+
+<div style="border:3px groove purple; background:yellow; padding:20px; margin:30px auto; max-width:600px; font-family:'Comic Sans MS', cursive;">
+  <h2 style="color:red; text-align:center;">🔥 Fan Review 🔥</h2>
+  <ul style="list-style-type: disc; padding-left: 20px; text-align: left;">
+    <li>“great religous rap for the kids” - *@xmorewivesmoreheadx*</li>
+    <li>“ts fireee” - *@lionvssmalldog*</li>
+    <li>“real yns worship allah” - *@icecube*</li>
+    <li>“only good america rapers i lisen to” - *@osamayn*</li>
+    <li>“real rap against real shit none of that druggie bs” - *@natu_alashwal*</li>
+  </ul>
+</div>
+  
+  <br><br>
+  
+<div style="background: hotpink; border: 4px dashed lime; padding: 20px; max-width: 600px; margin: 30px auto; font-family: Impact, fantasy; color: navy; text-align: center;">
+  <h2>👑 Sponsor by 👑</h2>
+  <div style="display:flex; flex-direction: column; gap:15px;">
+    <div style="background:white; padding:10px; border:2px dotted red;">
+      <strong>🔥 (Open Slot)</strong><br>
+      "Sponsor America most dangerous rap group!"<br>
+      <a href="#" style="color:blue;">Visit Now</a>
+    </div>
+    <div style="background:lightgray; padding:10px; border:2px dotted blue;">
+      <strong>💊 South Siede Viagra™</strong><br>
+      "Please all 12 of your wives!"<br>
+      <a href="ssv.html" style="color:darkgreen;">Visit Now</a>
+    </div>
+    <div style="background:yellow; padding:10px; border:2px dotted black;">
+      <strong>🔥 (Open Slot)</strong><br>
+      "Sponsor America most dangerous rap group!"<br>
+      <a href="#" style="color:purple;">Visit Now</a>
+    </div>
+  </div>
+</div>
+    
+  <br><br>
+    
+  <img src="https://www.kevinrichards.ca/construction.gif">
+    
+  <br><br>
+  
+  <div style="background:black; color:lime; font-family:'Courier New', monospace; padding:10px; border:5px double red; width:fit-content; margin:30px auto; text-align:center;">
+  <p>YOU ARE VISITOR #</p>
+  <div id="visitor-count" style="font-size:2em;">000000</div>
+</div>
+  
+  
+<script>
+  const fakeCount = Math.floor(30000 + Math.random() * 42069);
+  document.getElementById("visitor-count").textContent = fakeCount.toString().padStart(6, '0');
+</script>
+  <footer>
+    &copy; 2025 South Siede Voices. <br> Designed by AllahSkriptz Websites.
+  </footer>
+</body>
+    <script>alert("WARNING: Site to fire! Proceed with cautin!");</script>
+</html>

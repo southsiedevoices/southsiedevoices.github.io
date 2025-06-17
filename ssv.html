@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>South Siede Viagra | Fun For The Whole Family</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to bottom right, purple, black);
+      color: lime;
+      font-family: "Orbitron", cursive, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    .tagline {
+      font-style: italic;
+      font-size: 1.2em;
+      color: yellow;
+      margin-bottom: 30px;
+    }
+
+    .product-img {
+      width: 200px;
+      margin: 20px auto;
+      display: block;
+      border: 5px double white;
+    }
+
+    .blurb {
+      background: black;
+      padding: 20px;
+      border: 4px dashed magenta;
+      margin: 30px auto;
+      max-width: 600px;
+    }
+
+    .ingredients {
+      text-align: left;
+      margin-top: 20px;
+      background: darkred;
+      color: white;
+      padding: 10px;
+      border: 3px groove pink;
+    }
+
+    .buy-button {
+      background: cyan;
+      color: black;
+      font-size: 1.5em;
+      padding: 15px 30px;
+      border: 4px solid yellow;
+      cursor: pointer;
+      margin-top: 20px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .buy-button:hover {
+      transform: rotate(-3deg) scale(1.05);
+      background: hotpink;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: lightgray;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.9);
+    }
+
+    .modal-content {
+      background-color: #222;
+      margin: auto;
+      padding: 20px;
+      border: 5px groove lime;
+      width: 80%;
+      max-width: 500px;
+      color: white;
+      text-align: left;
+    }
+
+    .modal-content input, .modal-content select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 8px;
+      margin-bottom: 16px;
+      background: black;
+      color: lime;
+      border: 2px dashed red;
+      font-family: monospace;
+    }
+
+    .close {
+      color: red;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .submit-button {
+      background: hotpink;
+      color: black;
+      font-size: 1.2em;
+      padding: 10px;
+      border: 3px solid yellow;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .submit-button:hover {
+      background: lime;
+      color: purple;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💊 South Siede Viagra 💊</h1>
+  <div class="tagline">" please all 12 of your wives at once "</div>
+
+  <img src="https://media.giphy.com/media/dZBa6EQnbnsHe/giphy.gif" class="product-img" alt="Bizarre product animation">
+
+  <div class="blurb">
+    <p><strong>Saudi Arabia's top scientists teamed up with South Siede Voices to create a product Arabs and Americans will both love.</strong></p>
+    <p>Forged in a Pakistani compound, South Siede Viagra gives performance as strong as Allah's might and resilient as Muhammad's faith.</p>
+
+    <div class="ingredients">
+      <strong>Ingredients:</strong>
+      <ul>
+        <li>40mg Asbestos</li>
+        <li>20% Concentrated Horse Semen Extract</li>
+        <li>1 Drop Of Red 40</li>
+        <li>5mg Latina Sweat</li>
+        <li>1L Gypsy Tears</li>
+        <li>2 Used Cigarrettes</li>
+        <li>Pure Gumption</li>
+      </ul>
+    </div>
+
+    <a class="buy-button" onclick="document.getElementById('orderModal').style.display='block'">ORDER NOW</a>
+  </div>
+
+  <div id="blurb">
+  <font size="1"><p>
+    🚨 Side effects will include: permanent boner, homosexual urges, sudden onset hemorrhoidal rheumatoid arthritis, addiction to cocaine, stretchy foreskin, crabs (the animal), necrosis, prostate cancer, enjoyment of imagine dragons, foot fetish, and rectal hemorrhaging.<br><br>
+    South Siede Viagra™ does not apply to American drug safety laws.<br>
+    &copy; 2025 SSV Ent. | Made with sweet lovin'.
+  </p></font>
+  </div>
+
+  <div id="orderModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="document.getElementById('orderModal').style.display='none'">&times;</span>
+      <h2>🚚 Order</h2>
+      <p>Please enter your shipping info:</p>
+      <form onsubmit="alert('Your order will arrive soon in an unmarked briefcase.'); return false;">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Juju Al-Khayat">
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" placeholder="1456 Osama St. Riyadh, Saudi Arabia">
+
+        <label for="dose">Desired Potency / Flavour:</label>
+        <select id="dose">
+          <option value="regular">Regular (Pumpin' Pomegranate) $99.97</option>
+          <option value="extra">Extra (Munting Mango) $1499.99</option>
+          <option value="deluxe">Deluxe (Rapin' Raspberry) $271000.99</option>
+        </select>
+
+        <label for="payment">Payment Method:</label>
+        <input type="text" id="payment" placeholder="Cashapp / Dogecoin / Bored Ape NFTs / Sexual Favors">
+        
+        <p>(by confirming the order, you agree that your info will be used to sign up for isis)</p>
+
+        <button type="submit" class="submit-button">Place Order</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
