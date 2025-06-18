@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scientologist Casino</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom right, gold, navy);
+      color: white;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      text-align: center;
+      padding: 20px;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-size: 3em;
+      text-shadow: 2px 2px black;
+      margin-bottom: 10px;
+    }
+
+    .tagline {
+      color: #ffeb3b;
+      font-style: italic;
+      margin-bottom: 30px;
+    }
+
+    .casino-section {
+      background: rgba(0,0,0,0.7);
+      padding: 20px;
+      border: 5px groove gold;
+      max-width: 700px;
+      margin: 30px auto;
+    }
+
+    .slot-machine {
+      font-size: 3em;
+      background: black;
+      color: lime;
+      padding: 15px;
+      margin: 20px auto;
+      border: 4px double cyan;
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    .spin-button, .loan-button {
+      font-size: 1.5em;
+      padding: 10px 30px;
+      background: hotpink;
+      color: black;
+      border: 4px solid yellow;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .spin-button:hover, .loan-button:hover {
+      background: lime;
+      color: purple;
+    }
+
+    .results {
+      margin-top: 15px;
+      font-weight: bold;
+      color: #00ffcc;
+    }
+
+    .footer-note {
+      font-size: 0.85em;
+      margin-top: 40px;
+      color: #ccc;
+    }
+
+    .alert-box {
+      margin-top: 20px;
+      background: red;
+      color: yellow;
+      padding: 10px;
+      border: 3px dashed white;
+      font-weight: bold;
+    }
+
+    .status-bar {
+      margin-bottom: 20px;
+      font-size: 1.3em;
+      color: #ffeb3b;
+    }
+
+    /* Animations */
+    @keyframes winFlash {
+      0%, 100% { background-color: gold; }
+      50% { background-color: hotpink; }
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-10px); }
+      50% { transform: translateX(10px); }
+      75% { transform: translateX(-5px); }
+    }
+
+    .animate-win {
+      animation: shake 0.5s ease, winFlash 1s ease alternate 3;
+    }
+
+    .fireworks {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Scientologist Casino</h1>
+
+  <div class="status-bar">
+    💵 Money: $<span id="money">1000</span> | 🪙 Thetan Chips: <span id="chips">0</span>
+  </div>
+
+  <div class="casino-section">
+    <div id="slot" class="slot-machine">☯ ☯ ☯</div>
+    <br>
+    <button class="spin-button" onclick="spin()">Spin ($500)</button>
+    <div id="result" class="results"></div>
+    <div class="alert-box">"M📡E" wins you five minutes of free will!</div>
+  </div>
+
+  <div class="casino-section">
+    <h2>Need More Cash?</h2>
+    <button class="loan-button" onclick="getMoreMoney()" id="loanBtn">Take Out a Loan</button>
+  </div>
+
+  <div class="casino-section" style="margin-top: 40px;">
+    <h2>Current Featured Games</h2>
+    <ul style="text-align: left; padding-left: 40px;">
+      <li>💰 Thetan Slots</li>
+    </ul>
+  </div>
+
+  <div class="footer-note">
+    🛑 All funds converted into “Thetan Chips” | non-refundable, non-redeemable, spiritually binding.<br>
+    &copy; 2025 Cult Classics Gambling Ltd.
+  </div>
+
+  <!-- Fireworks GIF (optional) -->
+  <img src="https://media.giphy.com/media/3oEjHWpiVIOGXT5lVu/giphy.gif" class="fireworks hidden" id="fireworks" />
+
+  <!-- Sounds -->
+  <audio id="winSound" src="https://www.myinstants.com/media/sounds/slotsss.mp3"></audio>
+  <audio id="jackpotSound" src="https://www.myinstants.com/media/sounds/angy-monkey-mp3.mp3"></audio>
+
+  <script>
+    const symbols = ["☯", "🛸", "📘", "E", "M", "📡"];
+    let money = 5000;
+    let chips = 0;
+    let loanActions = [
+      "Take Out A Loan",
+      "Sell An Organ",
+      "Strip For The Night",
+      "Rob A Homeless Person",
+      "Take From Your Kid's College Fund",
+      "Steal From Charities",
+      "Sell Kids Olive Oil Carts",
+      "Ask A Genie"
+    ];
+    let loanIndex = 0;
+
+    const winSound = document.getElementById("winSound");
+    const jackpotSound = document.getElementById("jackpotSound");
+    const fireworks = document.getElementById("fireworks");
+    const slotElem = document.getElementById("slot");
+
+    function updateStatus() {
+      document.getElementById("money").textContent = money;
+      document.getElementById("chips").textContent = chips;
+    }
+
+    function spin() {
+      const result = document.getElementById("result");
+      fireworks.classList.add("hidden");
+      slotElem.classList.remove("animate-win");
+
+      if (money < 500) {
+        result.innerHTML = "😢 You're too broke to spin.";
+        return;
+      }
+
+      money -= 500;
+      updateStatus();
+
+      const pick = () => symbols[Math.floor(Math.random() * symbols.length)];
+      const a = pick();
+      const b = pick();
+      const c = pick();
+
+      slotElem.textContent = `${a} ${b} ${c}`;
+
+      if (a === "E" && b === "M" && c === "📡") {
+        result.innerHTML = "💥 JACKPOT! You've earned a pizza party on us and 10 Thetan Chips!";
+        chips += 10;
+        playWin(true);
+      } else if (a === b && b === c) {
+        result.innerHTML = "✨ Triple match! You've earned 4 Thetan Chips!";
+        chips += 4;
+        playWin(false);
+      } else if (a === "M" && b === "📡" && c === "E") {
+        result.innerHTML = "💥 You won 5 minutes of Free Will™ and 1 Thetan Chip!";
+        chips += 1;
+        playWin(false);
+      } else {
+        result.innerHTML = "No enlightenment for you. Try spending more money.";
+      }
+
+      updateStatus();
+    }
+
+    function playWin(isJackpot) {
+      slotElem.classList.add("animate-win");
+      if (isJackpot) {
+        jackpotSound.play();
+        fireworks.classList.remove("hidden");
+        setTimeout(() => fireworks.classList.add("hidden"), 4000);
+      } else {
+        winSound.play();
+      }
+    }
+
+    function getMoreMoney() {
+      money += 1000;
+      loanIndex = (loanIndex + 1) % loanActions.length;
+      document.getElementById("loanBtn").textContent = loanActions[loanIndex];
+      updateStatus();
+    }
+
+    updateStatus();
+  </script>
+</body>
+</html>
